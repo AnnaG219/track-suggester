@@ -1,34 +1,47 @@
 $(document).ready(function() {
   $("form#submit_info").submit(function(event) {
     event.preventDefault();
-    var side1 = parseFloat($("input#side1").val());
-    var side2 = parseFloat($("input#side2").val());
-    var side3 = parseFloat($("input#side3").val());
-    // if (age) {
-      if (side1 === side2 && side2 === side3 && side3 === side1) {
-        $('#notTriangle').hide();
-        $('#isosceles').hide();
-        $('#scalene').hide();
-        $('#equilateral').show();
+    var logicType = ($("logicType").val())
+    var workType = ($("typing").val());
+    var java = ($("workType").val());
+    var enviroment = ($("enviroment").val())
+    var company = ($("company").val())
+
+      if (logicType === "frontEnd") {
+        $('#choice1').hide();
+        $('#choice2').hide();
+        $('#choice3').hide();
+        $('#choice4').hide();
+        $('#choice5').show();
       }
-      else if (side1 === side2 || side2 === side3 || side3 === side1) {
-        $('#notTriangle').hide();
-        $('#scalene').hide();
-        $('#equilateral').hide();
-        $('#isosceles').show();
+      else if (logicType === "backEnd" && workType === "pHP" ) {
+        $('#choice1').hide();
+        $('#choice2').hide();
+        $('#choice3').hide();
+        $('#choice4').show();
+        $('#choice5').hide();
       }
-      else if (!(side1+side2<=side3) || (side1+side3<=side2) || (side2+side3<=side1)) {
-      $('#notTriangle').hide();
-      $('#isosceles').hide();
-      $('#equilateral').hide();
-      $('#scalene').show();
+      else if (logic type === "backEnd" && workType === "rest" && runTime === "interpreted") {
+        $('#choice1').hide();
+        $('#choice2').hide();
+        $('#choice3').show();
+        $('#choice4').hide();
+        $('#choice5').hide();
 
       }
-      else  {
-        $('#scalene').hide();
-        $('#isosceles').hide();
-        $('#equilateral').hide();
-        $('#notTriangle').show();
+      else if (logic type === "backEnd" && workType === "rest" && runTime === "compiled" && enviroment === "java") {
+        $('#choice2').hide();
+        $('#choice2').show();
+        $('#choice3').hide();
+        $('#choice4').hide();
+        $('#choice5').hide();
+      }
+      else (logic type === "backEnd" && workType === "rest" && runTime === "compiled" && enviroment === "cSharp" && company === "cSharp" ) {
+        $('#choice1').show();
+        $('#choice2').hide();
+        $('#choice3').hide();
+        $('#choice4').hide();
+        $('#choice5').hide();
       }
   });
 });

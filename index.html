@@ -14,53 +14,106 @@
       <p>Are you a student learning how to code or program? Are you coming closer to the point where you have to choose which programming language to learn? (Well at least to learn first, you'll have opportunities throughout your entire career to learn different languages if you so choose.) But initally you'll have to pick one language up to start on, and shouldn't you pick the track that encompasses the aspects that interest you? You have to consider what kind of programs you want to be writing, or even what kind of business enviroment your imagining yourself working in? Take a few minutes to answer these carefully thought out questions and  and by the end we'll suggest which track might be the best for you to pursue!</p>
 
       <form id="Tracking Suggester">
-        <div class="form-group">
-          <label for="logictype">Do you prefer Front-End Logic programming or Back-End Logic?</label>
-          <select id="logictype">
-            <option value="cssDesign">Front-End Logic (User Interface)</option>
-            <option value="backEnd">Back-End Logic (Business Logic)</option>
-          </select>
+        <label class="custom-control-label">When working on projects do you find yourself more interested in how it looks
+          or how it is presented? Or are you more interested in the innerworkings, how the solution was found, or problems solved?</label>
+        <div class="radio">
+          <label>
+              <input type="radio" name="logicType" value="frontEnd">
+               I'm more interested in how my project will look, it's design and presentation.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="logicType" value="backEnd">
+              I'm more interested in the innerworkings of things and how the problems are solved within.
+         </label>
         </div>
 
-        <div class="form-group">
-          <label for="typing">Explain different between dynamic and statis typing</label>
-          <select id="typing">
-            <option value="cSharpJava">statically typed</option>
-            <option value="pHPRubyRails">dynamically typed</option>
-          </select>
+        <label class="custom-control-label">Are you interested in rapid web application development or in languages that are used for websites but
+          <em>also</em> for other types of software?</label>
+        <div class="radio">
+          <label>
+              <input type="radio" name="workType" value="pHP">
+                I'd rather focus just on rapid web application development.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="workType" value="rest">
+              I might be interested in developing other types of software.
+         </label>
         </div>
 
-        <div class="form-group">
-          <label for="workType">Which kind of project work do you find yourself more inclined to work on?</label>
-          <select id="workType">
-            <option value="cSharp">Building internal software, or working on business software</option>
-            <option value="java">Working with high preformance processing to user interfaces </option>
-            <option value="pHP">Working with Content Management System createing multiple websits quickly for a diverse clientel.</option>
-            <option value="rubyRails">Building Interactive Web Applications entering info, creating accounts, </option>
-          </select>
+        <label class="custom-control-label">Would you prefer to program in a language is more rule oriented, requires you to be more
+          explicit in your coding, takes longer initially wrire but will run faster at runtime. Or would you prefer to have less
+          strictures on your coding, be able to execute programs faster, however possibly risk unknown outcomes at runtime?</label>
+        <div class="radio">
+          <label>
+              <input type="radio" name="runTime" value="compiled">
+                I'd rather more rule oriented and explicit coding, resulting in speed at runtime.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="runTime" value="interpreted">
+             I'd rather less strictures in coding, and being able to program faster.
+         </label>
         </div>
 
-        <div class="form-group">
-          <label for="enviroment">What sort of business could you see yourself working for?</label>
-          <select id="enviroment">
-            <option value="cSharp">Very large and Established business.</option>
-            <option value="java">Enterprise Companies.</option>
-            <option value="pHP">Working For Brands, Businesses, or Organizations, diversity.</option>
-            <option value="rubyRails">For smaller companies, startups wanting quick product building.</option>
-          </select>
+
+        <label class="custom-control-label">What sort of business do you see yourself working for?</label>
+        <div class="radio">
+          <label>
+              <input type="radio" name="enviroment" value="cSharp">
+                A very large and Established business.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="enviroment" value="java">
+             Enterprise Companies.
+         </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="enviroment" value="pHP">
+            Working for Brands, Businesses, or Organizations.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="enviroment" value="rubyRails">
+            For smaller companies, startups wanting quick product building.
+          </label>
         </div>
 
-        <div class="form-group">
-          <label for="company">Which of these companies would you rather be at?</label>
-          <select id="company">
-            <option value="cSharp">Microsoft</option>
-            <option value="java">Android</option>
-            <option value="pHP">Facebook </option>
-            <option value="rubyRails">Hulu</option>
-          </select>
+        <label class="custom-control-label">Which of these companies would you most like to work for?</label>
+        <div class="radio">
+          <label>
+              <input type="radio" name="company" value="cSharp">
+                Microsoft
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="company" value="java">
+             Amazon
+         </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="company" value="pHP">
+            Facebook
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="company" value="rubyRails">
+            Hulu
+          </label>
         </div>
 
-        <button type="submit" class="btn btn-primary">Your date</button>
+        <button type="submit" class="btn btn-primary">Track Choice</button>
 
         <div id="choice1">
           <h2>Fantastic!</h2>
@@ -77,8 +130,37 @@
             most inclined to start learning! Java is used anywhere from high-preformance processing
             to building Android User interfaces. That's right, Android. Java is a cross platform
             meaning it is just as easily used for smartphone apps as it is desktop apps. Used mainly by enterprise companies <strong>Java is the most popular of all the languages.</strong>
+        </div>
 
+        <div id="choice3"
+          <h2>Amazing!</h2>
+          <p><strong>So Ruby it is! Which inevitably means Rails as well, the favorite language of
+            building interactive web applications.</strong> This is by far one of the easier languages
+            to read, and is commonly used to increase productivity. Ruby is involved in almost
+             everything involving creating accounts, entering information, and interacting with
+             dynamic content. Due to the fact that Ruby simplified many common tasks involved with
+              building web applications,</p>
+          </div>
 
+        <div id="choice4"
+          <h2>Lucky you!</h2>
+          <p>It seems that PHP will be the language best suited to what your looking
+            for in the industry! <strong>The most popular Back End language,</strong> best
+            known for its uses in content management systems. ie Wordpress, Drupal, & Joomla.
+            Primarily open source for web development, 80% of all sites today use PHP 'server side'.
+            A versatile language, you are bound to have diverse employment options. Due to the
+            fast paced nature that goes along with PHP you'll most likely be concerned with
+            building sites for Brands, businesses or organizations. </p>
+        </div>
+
+        <div id="choice5"
+          <h2>Wonderful!</h2>
+          <p>It seems you are interested in the Front End language HTMl and CSS, dealing with the
+            <strong>design aspect of web pages, what the user is actually interacting with!</strong> This is a
+            presentation language used to tailor your webpage, the font, images, headers, etc are all
+            being organized in an elegant fashion. This is the creation of the design your User will see
+             when heading to a website.  </p>
+        </div>
       </form>
     </div>
   </body>
