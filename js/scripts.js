@@ -1,73 +1,34 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Survey!</title>
-  </head>
-  <body>
-  <div class="container">
-    <div>
-      <form id="formOne">
+$(document).ready(function() {
+  $("form#submit_info").submit(function(event) {
+    event.preventDefault();
+    var side1 = parseFloat($("input#side1").val());
+    var side2 = parseFloat($("input#side2").val());
+    var side3 = parseFloat($("input#side3").val());
+    // if (age) {
+      if (side1 === side2 && side2 === side3 && side3 === side1) {
+        $('#notTriangle').hide();
+        $('#isosceles').hide();
+        $('#scalene').hide();
+        $('#equilateral').show();
+      }
+      else if (side1 === side2 || side2 === side3 || side3 === side1) {
+        $('#notTriangle').hide();
+        $('#scalene').hide();
+        $('#equilateral').hide();
+        $('#isosceles').show();
+      }
+      else if (!(side1+side2<=side3) || (side1+side3<=side2) || (side2+side3<=side1)) {
+      $('#notTriangle').hide();
+      $('#isosceles').hide();
+      $('#equilateral').hide();
+      $('#scalene').show();
 
-        <div class="form-group">
-          <label for="person1">What is you name? (First, Last)</label>
-          <input id="person1" class="form-control" type="text">
-        </div>
-
-        <div class="form-group">
-          <label for="state">What State do you live in?</label>
-          <input id="state" class="form-control" type="text">
-        </div>
-      </form>
-    </di
-    <div class="radio">
-      <label>
-        <input type="radio" name="flavor" value="chocolate" checked>
-        Chocolate
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="flavor" value="grape">
-        grape
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="flavor" value="apple">
-        apple
-      </label>
-    </div>
-
-    <div class="radio">
-      <label>
-        <input type="radio" name="flavor" value="cherry" checked>
-        cherry
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="flavor" value="banana">
-        banana
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="flavor" value="orange">
-        orange
-      </label>
-    </div>
-    <div class="form-group">
-      <label for="born">Date of birth:</label>
-      <input id="born" class="form-control" type="date">
-    </div>
-    <div class="form-group">
-      <label for="color">What is your favorite color?</label>
-      <input id="color" class="form-control" type="color">
-    </div>
-  </div>
-</body>
-</html>
+      }
+      else  {
+        $('#scalene').hide();
+        $('#isosceles').hide();
+        $('#equilateral').hide();
+        $('#notTriangle').show();
+      }
+  });
+});

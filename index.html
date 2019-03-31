@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Tracking Suggester</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>What Programming Is For You?</h1>
+
+      <p>Are you a student learning how to code or program? Are you coming closer to the point where you have to choose which programming language to learn? (Well at least to learn first, you'll have opportunities throughout your entire career to learn different languages if you so choose.) But initally you'll have to pick one language up to start on, and shouldn't you pick the track that encompasses the aspects that interest you? You have to consider what kind of programs you want to be writing, or even what kind of business enviroment your imagining yourself working in? Take a few minutes to answer these carefully thought out questions and  and by the end we'll suggest which track might be the best for you to pursue!</p>
+
+      <form id="Tracking Suggester">
+        <div class="form-group">
+          <label for="logictype">Do you prefer Front-End Logic programming or Back-End Logic?</label>
+          <select id="logictype">
+            <option value="cssDesign">Front-End Logic (User Interface)</option>
+            <option value="backEnd">Back-End Logic (Business Logic)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="typing">Explain different between dynamic and statis typing</label>
+          <select id="typing">
+            <option value="cSharpJava">statically typed</option>
+            <option value="pHPRubyRails">dynamically typed</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="workType">Which kind of project work do you find yourself more inclined to work on?</label>
+          <select id="workType">
+            <option value="cSharp">Building internal software, or working on business software</option>
+            <option value="java">Working with high preformance processing to user interfaces </option>
+            <option value="pHP">Working with Content Management System createing multiple websits quickly for a diverse clientel.</option>
+            <option value="rubyRails">Building Interactive Web Applications entering info, creating accounts, </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="enviroment">What sort of business could you see yourself working for?</label>
+          <select id="enviroment">
+            <option value="cSharp">Very large and Established business.</option>
+            <option value="java">Enterprise Companies.</option>
+            <option value="pHP">Working For Brands, Businesses, or Organizations, diversity.</option>
+            <option value="rubyRails">For smaller companies, startups wanting quick product building.</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="company">Which of these companies would you rather be at?</label>
+          <select id="company">
+            <option value="cSharp">Microsoft</option>
+            <option value="java">Android</option>
+            <option value="pHP">Facebook </option>
+            <option value="rubyRails">Hulu</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Your date</button>
+
+        <div id="choice1">
+          <h2>Fantastic!</h2>
+          <p> It looks like <strong>C#</strong> is the language for you to learn!
+             C# is very popular with bigger companies, especially Microsoft considering
+             they wrote C# in 2001. Often used for building internal software this language
+             is also strongly and statically typed and is the backing of Microsoft.
+              C# is also one of the most <em>in demand languages on the market.</em></p>
+        </div>
+
+        <div id="choice2">
+          <h2>Congratulations!</h2>
+          <p> It seems like <strong>Java</strong> is the language you might me the
+            most inclined to start learning! Java is used anywhere from high-preformance processing
+            to building Android User interfaces. That's right, Android. Java is a cross platform
+            meaning it is just as easily used for smartphone apps as it is desktop apps. Used mainly by enterprise companies <strong>Java is the most popular of all the languages.</strong>
+
+
+      </form>
+    </div>
+  </body>
+</html>
