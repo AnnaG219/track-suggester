@@ -21,7 +21,7 @@ $(document).ready(function() {
         $('#choice4').show();
         $('#choice5').hide();
       }
-      else if (logic type === "backEnd" && workType === "rest" && runTime === "interpreted") {
+      else if (logicType === "backEnd" && workType === "rest" && runTime === "interpreted") {
         $('#choice1').hide();
         $('#choice2').hide();
         $('#choice3').show();
@@ -29,14 +29,14 @@ $(document).ready(function() {
         $('#choice5').hide();
 
       }
-      else if (logic type === "backEnd" && workType === "rest" && runTime === "compiled" && enviroment === "java") {
+      else if (logicType === "backEnd" && workType === "rest" && runTime === "compiled" && enviroment === "java") {
         $('#choice2').hide();
         $('#choice2').show();
         $('#choice3').hide();
         $('#choice4').hide();
         $('#choice5').hide();
       }
-      else (logic type === "backEnd" && workType === "rest" && runTime === "compiled" && enviroment === "cSharp" && company === "cSharp" ) {
+      else {
         $('#choice1').show();
         $('#choice2').hide();
         $('#choice3').hide();
