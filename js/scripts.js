@@ -1,11 +1,11 @@
 $(document).ready(function() {
-  $("form#submit_info").submit(function(event) {
+  $("form#Tracking_Suggester").submit(function(event) {
     event.preventDefault();
-    var logicType = ($("logicType").val())
-    var workType = ($("typing").val());
-    var java = ($("workType").val());
-    var enviroment = ($("enviroment").val())
-    var company = ($("company").val())
+    var logicType = $("input[name=logicType]:checked").val();
+    var workType = $("input [name=workType]:checked").val();
+    var runTime = $("input [name=runTime]:checked").val();
+    var enviroment = $("input[name=enviroment]:checked").val();
+    var company = $("input [name=company]:checked").val();
 
       if (logicType === "frontEnd") {
         $('#choice1').hide();
@@ -14,14 +14,14 @@ $(document).ready(function() {
         $('#choice4').hide();
         $('#choice5').show();
       }
-      else if (logicType === "backEnd" && workType === "pHP" ) {
+      else if ( (logicType === "backEnd") && (workType === "pHP") ){
         $('#choice1').hide();
         $('#choice2').hide();
         $('#choice3').hide();
         $('#choice4').show();
         $('#choice5').hide();
       }
-      else if (logicType === "backEnd" && workType === "rest" && runTime === "interpreted") {
+      else if ( (logicType === "backEnd") && (workType === "rest") && (runTime === "interpreted") ) {
         $('#choice1').hide();
         $('#choice2').hide();
         $('#choice3').show();
